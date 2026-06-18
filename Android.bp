@@ -82,6 +82,8 @@ cc_test {
     ],
 }
 
+// smoreland@google.com says this is deprecated,
+// and delete it for a good Android!
 cc_library {
     name: "libhidlbase",
     defaults: ["libhidlbase-combined-impl"],
@@ -213,9 +215,6 @@ cc_defaults {
     product_variables: {
         debuggable: {
             cflags: ["-DLIBHIDL_TARGET_DEBUGGABLE"],
-        },
-        enforce_vintf_manifest: {
-            cflags: ["-DENFORCE_VINTF_MANIFEST"],
         },
     },
 
